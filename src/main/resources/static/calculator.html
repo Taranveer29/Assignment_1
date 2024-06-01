@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Grade Calculator</title>
+    <link rel="stylesheet" href="css/calculator.css" />
+</head>
+
+<body>
+
+    <div class="first">
+            <div class="second">
+                <div class="border top_border"></div>
+                <header>Grade Calculator</header>
+                <div class="ADD_ROW">
+                    <h3>Activities</h3>
+                    <p>Give grades to the numeric activities:</p>
+                    <table id="table" class="main-table">
+                        <thead>
+                            <tr>
+                                <th>Name</th> <th>Short Name</th> <th>Weight</th><th>Grade</th><th>Percent</th>
+                            </tr>
+                        </thead>
+                        <tbody id="table_body" class="tbody">
+                            <tr>
+                                <td>Activity 1</td>
+                                <td>A1</td>
+                                <td class="input_td">
+                                    <input id="weight1" type="number" min="0" />
+                                </td>
+                                <td  onchange="getPercent(1)" class="input_td">
+                                    <input id="score1"  class="score" type="number" min="0" /> /
+                                    <input id="total1"  class="total" type="number" min="0" />
+                                </td>
+                                <td>
+                                    <p id="percent1"></p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <button class="btn_add_activity" onclick="addRow()">ADD ROW</button><br/>
+                    <div>
+                        <p class="final">Result<span class="final" id="result"></span>
+                        </p>
+                    </div>
+                    <div class="buttons>"style="padding-bottom: 0em">
+                        <button class="right_side" onclick="getWeight()">WEIGHTED</button>
+                        <style> .right_side { 
+                            float: right;
+                        } 
+                        </style>
+                        <button class="left_side" onclick="getMean()">MEAN</button>
+                    </div>
+                </div>
+                <div class = "border bottom_border"></div>
+            </div>
+    </div>
+    <script src="calculator.js"></script>
+</body>
+
+</html>
