@@ -78,11 +78,11 @@
 		</dependency>
 
 	
-	<dependecy> 
+	<dependency> 
 	<groupId> org.postgresql</groupId>
 	<artifactId>postgresql</artifactId>
 	<scope>runtime</scope>
-	</dependecy>
+	</dependency>
 </dependencies>
 
 	<build>
